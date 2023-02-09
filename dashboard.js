@@ -72,7 +72,11 @@ const appendData=(data)=>{
 }
 
 const deleteel=(id)=>{
-
+    return fetch(`https://mock-round-3.onrender.com/data/${id}`,{
+        method:"DELETE"
+    })
+    .then((res)=>res.json()
+        .then(()=>getData()))
 }
 
 const Modal = document.getElementById("movies-modal");
@@ -85,14 +89,17 @@ const editel=(id)=>{
     let form=document.getElementById("editform")
     form.addEventListener("click",(e)=>{
         e.preventDefault()
-        let name=document.getElementById("mavie-name").value
+        let obj={
+            name:document.getElementById("moviename").value
+        }
         return fetch(`https://mock-round-3.onrender.com/data/${id}`,{
             method:"PATCH",
             headers:{
                 "Content-Type":"application/json",
             },
-            body:JSON.stringify({book_name:name})
-        }).then((res).res.json())
+            body:JSON.stringify({book_name:obj.name})
+        }).then((res)=>res.json()
+        .then(()=>getData()))
     })
 }
 let closeModel = document.querySelector(".close-btn");
