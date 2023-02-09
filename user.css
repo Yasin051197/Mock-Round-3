@@ -1,0 +1,12 @@
+#nav{
+    padding: 10px;
+    background-color: blueviolet;
+    color: aliceblue;
+}
+#nav a{
+    margin-left: 30%;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    color: aliceblue;
+}

@@ -4,12 +4,13 @@ const getData=async()=>{
     console.log(data)
     appendData(data)
 }
-let container=document.getElementById("")
+let container=document.getElementById("movies")
 const appendData=(data)=>{
     container.innerHTML=" "
     data.forEach(el => {
         let div=document.createElement("div")
         div.setAttribute("id","div")
+        div.style.display="fles"
         let div1=document.createElement("div")
         div1.setAttribute("id","divfirst")
         let div2=document.createElement("div")
@@ -28,8 +29,10 @@ const appendData=(data)=>{
         publisher.innerText=el.publisher
         let cost=document.createElement("p")
         cost.innerText=el.cost
+        let button=document.createElement("button")
+        button.innerText="BORROW"
         div1.append(image)
-        div2.append(book_name,author,genre,edition,publisher,cost)
+        div2.append(book_name,author,genre,edition,publisher,cost,button)
         div.append(div1,div2)
         container.append(div)
     });
