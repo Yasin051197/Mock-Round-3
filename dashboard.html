@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./dashboard.css">
 </head>
 <body>
     <form id="dashboard">
@@ -36,6 +37,35 @@
         <br>
         <input type="submit" value="submit">
        </form> 
+       <div id="moviesData">
+        <table>
+            <thead>
+                <tr>
+                    <th>Book Cover Image</th>
+                    <th>Name of the book</th>
+                    <th>Author of the book</th>
+                    <th>Genre</th>
+                    <th>Edition </th>
+                    <th>Publisher</th>
+                    <th>Cost</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="ttbody">
+
+            </tbody>
+        </table>
+       </div>
+       <div id="movies-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <form id="editform">
+            <input id="movie-name" type="text" placeholder="Edit name">
+            <input type="submit" value="submit">
+          </form>
+        </div>
+      </div>
 </body>
 </html>
 <script src="./dashboard.js"></script>
